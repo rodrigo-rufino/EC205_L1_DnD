@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dados"
+            android:title="Dados" />
+        <item
+            android:id="@+id/nav_personagens"
+            android:title="Personagens" />
+        <item
+            android:id="@+id/nav_magias"
+            android:title="Magias" />
+        <item
+            android:id="@+id/nav_armas"
+            android:title="Armas" />
+        <item
+            android:id="@+id/nav_equip"
+            android:title="Equipamentos" />
+        <item
+            android:id="@+id/nav_regras"
+            android:title="Regras" />
+
+    </group>
+
+</menu>
