@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_character">
+    android:id="@+id/dialog_character">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,84 +12,101 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:id="@+id/character_name_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_name_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Personagem"
                 android:layout_gravity="center"/>
 
             <EditText
+                android:id="@+id/character_xp_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_xp_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Experiência"
                 android:layout_gravity="center"/>
 
             <EditText
+                android:id="@+id/character_class_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_class_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Classe"
                 android:layout_gravity="center"/>
 
             <EditText
+                android:id="@+id/character_hitdice_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_hitdice_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Dados de Vida"
                 android:layout_gravity="center"/>
 
             <EditText
+                android:id="@+id/character_caracteristics_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_caracteristics_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Características"
                 android:layout_gravity="center"/>
 
             <EditText
+                android:id="@+id/character_level_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_level_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nível"
                 android:layout_gravity="center"/>
 
             <EditText
+                android:id="@+id/character_alignment_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/character_alignment_text_view"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Alinhamento"
                 android:layout_gravity="center"/>
         </LinearLayout>
-
-
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+        <Button
+            android:id="@+id/character_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"/>
+        <Button
+            android:id="@+id/character_confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok"/>
+    </LinearLayout>
+
 
 </LinearLayout>

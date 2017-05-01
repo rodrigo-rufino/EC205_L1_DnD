@@ -4,21 +4,16 @@
     android:id="@+id/fragment_admin"
     android:paddingTop="10dp"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_view_username_character_list"
-        android:layout_gravity="center"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar Personagem"
-        android:id="@+id/button_add_character"
+        android:text="Adicionar Magia"
+        android:id="@+id/button_add_magic"
         android:layout_gravity="center"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view_character"
+        android:id="@+id/list_view_magic"
         android:divider="@android:color/transparent"
         android:padding="10dp"></ListView>
 </LinearLayout>

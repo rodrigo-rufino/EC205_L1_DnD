@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "380419918145",
+    "firebase_url": "https://dungeonsanddragons-9c30d.firebaseio.com",
+    "project_id": "dungeonsanddragons-9c30d",
+    "storage_bucket": "dungeonsanddragons-9c30d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380419918145:android:5c5e92e2a43fe12e",
+        "android_client_info": {
+          "package_name": "com.ec205.dnd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380419918145-3k8fa45ie4ete3ke23i5tigf95ch7s2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ec205.dnd",
+            "certificate_hash": "81e33c9aef2e4e103697a6dcf2c9fd7d29864fe7"
+          }
+        },
+        {
+          "client_id": "380419918145-qcf2muij2hh0p3o74m6aldlae36cvj6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvJJPpMYy2YpAc7T2qb2hug_7eRWOuKGU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380419918145-qcf2muij2hh0p3o74m6aldlae36cvj6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

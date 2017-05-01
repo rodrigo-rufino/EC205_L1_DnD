@@ -1,67 +1,57 @@
 package com.ec205.dnd;
 
 public class Character {
-    private String Name;
-    private String Xp;
-    private String CharacterClass;
-    private String HitDice;
-    private String Caracteristics;
-    private String Level;
-    private String Alignment;
+    public String name;
+    public String xp;
+    public String characterClass;
+    public String hitDice;
+    public String caracteristics;
+    public String level;
+    public String alignment;
 
-    public String getName() {
-        return Name;
+    public  Character(){}
+
+    public Character(String name,
+                     String xp,
+                     String characterClass,
+                     String hitDice,
+                     String caracteristics,
+                     String level,
+                     String alignment){
+        this.name = name;
+        this.xp = xp;
+        this.characterClass = characterClass;
+        this.hitDice = hitDice;
+        this.caracteristics = caracteristics;
+        this.level = level;
+        this.alignment = alignment;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public String getName() {
+        return name;
     }
 
     public String getXp() {
-        return Xp;
-    }
-
-    public void setXp(String xp) {
-        Xp = xp;
+        return xp;
     }
 
     public String getCharacterClass() {
-        return CharacterClass;
-    }
-
-    public void setCharacterClass(String characterClass) {
-        CharacterClass = characterClass;
+        return characterClass;
     }
 
     public String getHitDice() {
-        return HitDice;
-    }
-
-    public void setHitDice(String hitDice) {
-        HitDice = hitDice;
+        return hitDice;
     }
 
     public String getCaracteristics() {
-        return Caracteristics;
-    }
-
-    public void setCaracteristics(String caracteristics) {
-        Caracteristics = caracteristics;
+        return caracteristics;
     }
 
     public String getLevel() {
-        return Level;
-    }
-
-    public void setLevel(String level) {
-        Level = level;
+        return level;
     }
 
     public String getAlignment() {
-        return Alignment;
-    }
-
-    public void setAlignment(String alignment) {
-        Alignment = alignment;
+        return alignment;
     }
 }
