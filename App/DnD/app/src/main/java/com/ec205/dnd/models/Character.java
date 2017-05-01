@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.models;
 
 public class Character {
     public String name;
