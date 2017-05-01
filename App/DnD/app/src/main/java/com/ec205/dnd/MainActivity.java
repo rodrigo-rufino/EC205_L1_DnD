@@ -1,6 +1,6 @@
 package com.ec205.dnd;
 
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
+        onNavigationItemSelected(navigationView.getMenu().getItem(0));
     }
 
     @Override
@@ -72,18 +74,21 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_dados) {
-
+            Toast.makeText(this, "Dados.", Toast.LENGTH_SHORT).show();
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, new DiceFragment());
+            ft.commit();
 
         } else if (id == R.id.nav_personagens) {
             Toast.makeText(this, "Personagens.", Toast.LENGTH_SHORT).show();
-            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.content_main, new CharacterFragment());
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, new CharacterLoginFragment());
             ft.commit();
 
         } else if (id == R.id.nav_magias) {
             Toast.makeText(this, "Magias.", Toast.LENGTH_SHORT).show();
-            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.content_main, new MagicFragment());
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, new MagicListFragment());
             ft.commit();
 
         } else if (id == R.id.nav_armas) {
