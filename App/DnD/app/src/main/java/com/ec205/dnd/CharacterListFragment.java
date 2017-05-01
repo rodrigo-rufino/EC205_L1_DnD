@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ec205.dnd.models.Character;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -90,6 +91,71 @@ public class CharacterListFragment extends Fragment {
         addCharacter();
 
         return view;
+    }
+
+    private void addCharacter(){
+        addCharacterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addCharacterDialogBuilder = new AlertDialog.Builder(getContext());
+                View addCharacterDialogView = inflater.inflate(R.layout.dialog_character, null);
+                final EditText characterEditText = (EditText) addCharacterDialogView.findViewById(R.id.character_name_edit_text);
+                final EditText xpEditText = (EditText) addCharacterDialogView.findViewById(R.id.character_xp_edit_text);
+                final EditText classTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_class_edit_text);
+                final EditText hitDiceTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_hitdice_edit_text);
+                final EditText caracteristicsEditText = (EditText) addCharacterDialogView.findViewById(R.id.character_caracteristics_edit_text);
+                final EditText levelEditText = (EditText) addCharacterDialogView.findViewById(R.id.character_level_edit_text);
+                final EditText alignmentEditText = (EditText) addCharacterDialogView.findViewById(R.id.character_alignment_edit_text);
+
+                Button addCharacterButton = (Button) addCharacterDialogView.findViewById(R.id.character_confirm_button);
+                Button deleteCharacterButton = (Button) addCharacterDialogView.findViewById(R.id.character_delete_button);
+                deleteCharacterButton.setEnabled(false);
+
+                addCharacterButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Boolean exists = false;
+                        if(!characters.isEmpty()){
+                            for(Character i : characters){
+                                if(i.getName().compareTo(characterEditText.getText().toString()) == 0) exists = true;
+                            }
+                        }
+
+                        if(exists){
+                            Toast.makeText(getActivity(), "Nome do personagem já existente.", Toast.LENGTH_SHORT).show();
+                        }else if(characterEditText.getText().toString().compareTo("") == 0){
+                            Toast.makeText(getActivity(), "Preencha o nome Personagem.", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Character newCharacter = new Character(
+                                    characterEditText.getText().toString(),
+                                    xpEditText.getText().toString(),
+                                    classTextView.getText().toString(),
+                                    hitDiceTextView.getText().toString(),
+                                    caracteristicsEditText.getText().toString(),
+                                    levelEditText.getText().toString(),
+                                    alignmentEditText.getText().toString()
+                            );
+                            mDatabaseRef.child("users").child(username).child("characters").child(characterEditText.getText().toString()).setValue(newCharacter);
+
+                            characterEditText.setText("");
+                            xpEditText.setText("");
+                            classTextView.setText("");
+                            hitDiceTextView.setText("");
+                            caracteristicsEditText.setText("");
+                            levelEditText.setText("");
+                            alignmentEditText.setText("");
+
+                            addCharacterDialog.cancel();
+                        }
+                    }
+                });
+
+                addCharacterDialogBuilder.setView(addCharacterDialogView);
+                addCharacterDialog = addCharacterDialogBuilder.create();
+
+                addCharacterDialog.show();
+            }
+        });
     }
 
     private void editCharacter(){
@@ -175,71 +241,6 @@ public class CharacterListFragment extends Fragment {
 
                     }
                 });
-            }
-        });
-    }
-
-    private void addCharacter(){
-        addCharacterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addCharacterDialogBuilder = new AlertDialog.Builder(getContext());
-                View addCharacterDialogView = inflater.inflate(R.layout.dialog_character, null);
-                final EditText characterTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_name_edit_text);
-                final EditText xpTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_xp_edit_text);
-                final EditText classTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_class_edit_text);
-                final EditText hitDiceTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_hitdice_edit_text);
-                final EditText caracteristicsTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_caracteristics_edit_text);
-                final EditText levelTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_level_edit_text);
-                final EditText alignmentTextView = (EditText) addCharacterDialogView.findViewById(R.id.character_alignment_edit_text);
-
-                Button addCharacterButton = (Button) addCharacterDialogView.findViewById(R.id.character_confirm_button);
-                Button deleteCharacterButton = (Button) addCharacterDialogView.findViewById(R.id.character_delete_button);
-                deleteCharacterButton.setEnabled(false);
-
-                addCharacterButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Boolean exists = false;
-                        if(!characters.isEmpty()){
-                            for(Character i : characters){
-                                if(i.getName().compareTo(characterTextView.getText().toString()) == 0) exists = true;
-                            }
-                        }
-
-                        if(exists){
-                            Toast.makeText(getActivity(), "Nome do personagem já existente.", Toast.LENGTH_SHORT).show();
-                        }else if(characterTextView.getText().toString().compareTo("") == 0){
-                            Toast.makeText(getActivity(), "Preencha o nome Personagem.", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Character newCharacter = new Character(
-                                    characterTextView.getText().toString(),
-                                    xpTextView.getText().toString(),
-                                    classTextView.getText().toString(),
-                                    hitDiceTextView.getText().toString(),
-                                    caracteristicsTextView.getText().toString(),
-                                    levelTextView.getText().toString(),
-                                    alignmentTextView.getText().toString()
-                            );
-                            mDatabaseRef.child("users").child(username).child("characters").child(characterTextView.getText().toString()).setValue(newCharacter);
-
-                            characterTextView.setText("");
-                            xpTextView.setText("");
-                            classTextView.setText("");
-                            hitDiceTextView.setText("");
-                            caracteristicsTextView.setText("");
-                            levelTextView.setText("");
-                            alignmentTextView.setText("");
-
-                            addCharacterDialog.cancel();
-                        }
-                    }
-                });
-
-                addCharacterDialogBuilder.setView(addCharacterDialogView);
-                addCharacterDialog = addCharacterDialogBuilder.create();
-
-                addCharacterDialog.show();
             }
         });
     }

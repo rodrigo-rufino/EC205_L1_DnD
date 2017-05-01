@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.ec205.dnd.models.Magic;
+
 import java.util.ArrayList;
 
 /**

@@ -74,28 +74,34 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_dados) {
+            this.getSupportActionBar().setTitle("Rolador de Dados");
             Toast.makeText(this, "Dados.", Toast.LENGTH_SHORT).show();
             final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, new DiceFragment());
             ft.commit();
 
         } else if (id == R.id.nav_personagens) {
+            this.getSupportActionBar().setTitle("Personagens");
             Toast.makeText(this, "Personagens.", Toast.LENGTH_SHORT).show();
             final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, new CharacterLoginFragment());
             ft.commit();
 
         } else if (id == R.id.nav_magias) {
+            this.getSupportActionBar().setTitle("Magias");
             Toast.makeText(this, "Magias.", Toast.LENGTH_SHORT).show();
             final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, new MagicListFragment());
             ft.commit();
 
         } else if (id == R.id.nav_armas) {
+            this.getSupportActionBar().setTitle("Armas");
 
         } else if (id == R.id.nav_equip) {
+            this.getSupportActionBar().setTitle("Equipamentos");
 
         } else if (id == R.id.nav_regras) {
+            this.getSupportActionBar().setTitle("Regras");
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
