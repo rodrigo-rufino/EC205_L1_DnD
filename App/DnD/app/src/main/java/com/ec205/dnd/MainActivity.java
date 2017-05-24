@@ -96,12 +96,24 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_armas) {
             this.getSupportActionBar().setTitle("Armas");
+            Toast.makeText(this, "Armas.", Toast.LENGTH_SHORT).show();
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, new WeaponListFragment());
+            ft.commit();
 
         } else if (id == R.id.nav_equip) {
             this.getSupportActionBar().setTitle("Equipamentos");
+            Toast.makeText(this, "Equipamentos.", Toast.LENGTH_SHORT).show();
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, new EquipamentListFragment());
+            ft.commit();
 
         } else if (id == R.id.nav_regras) {
             this.getSupportActionBar().setTitle("Regras");
+            Toast.makeText(this, "Equipamentos.", Toast.LENGTH_SHORT).show();
+            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, new RulesFragment());
+            ft.commit();
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

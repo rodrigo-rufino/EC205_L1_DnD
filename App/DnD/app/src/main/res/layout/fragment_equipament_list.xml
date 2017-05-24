@@ -7,12 +7,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar Magia"
-        android:id="@+id/button_add_magic"
+        android:text="Adicionar Equipamento"
+        android:id="@+id/button_add_equipament"
         android:layout_gravity="center"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view_magic"
+        android:id="@+id/list_view_equipament"
         android:padding="10dp"></ListView>
 </LinearLayout>
