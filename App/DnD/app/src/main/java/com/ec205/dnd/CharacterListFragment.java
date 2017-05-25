@@ -177,7 +177,7 @@ public class CharacterListFragment extends Fragment {
                 final EditText levelTextView = (EditText) editCharacterDialogView.findViewById(R.id.character_level_edit_text);
                 final EditText alignmentTextView = (EditText) editCharacterDialogView.findViewById(R.id.character_alignment_edit_text);
 
-                Button addCharacterButton = (Button) editCharacterDialogView.findViewById(R.id.character_confirm_button);
+                Button editCharacterButton = (Button) editCharacterDialogView.findViewById(R.id.character_confirm_button);
                 Button deleteCharacterButton = (Button) editCharacterDialogView.findViewById(R.id.character_delete_button);
 
                 deleteCharacterButton.setEnabled(true);
@@ -212,7 +212,7 @@ public class CharacterListFragment extends Fragment {
                     }
                 });
 
-                addCharacterButton.setOnClickListener(new View.OnClickListener() {
+                editCharacterButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
