@@ -38,7 +38,8 @@
                 android:id="@+id/equipament_level_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:inputType="number"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +50,8 @@
                 android:id="@+id/equipament_hp_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:inputType="number"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +73,8 @@
                 android:id="@+id/equipament_xp_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:inputType="number"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -67,13 +67,11 @@ public class RulesFragment extends Fragment {
                 String login = loginEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                if (login.compareTo(correctLogin)==0 && password.compareTo(correctPassword)==0){
+                if (login.compareTo(correctLogin)==0 && password.compareTo(correctPassword)==0) {
                     editRuleButton.setEnabled(true);
                     ruleEditText.setFocusable(true);
                     ruleEditText.setFocusableInTouchMode(true);
                     Toast.makeText(getActivity(), "Login realizado com sucesso.", Toast.LENGTH_SHORT).show();
-                } else if(login.isEmpty() || password.isEmpty()){
-                    Toast.makeText(getActivity(), "Preencha o campo de Login e/ou Senha.", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getActivity(), "Login e/ou Senha incorretos.", Toast.LENGTH_SHORT).show();
                 }
