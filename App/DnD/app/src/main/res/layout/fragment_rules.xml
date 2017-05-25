@@ -1,9 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_admin"
     android:paddingTop="10dp"
     android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/rules"
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,24 +56,32 @@
             />
     </LinearLayout>
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login administrador"
-        android:id="@+id/button_login_rules"
-        android:layout_gravity="center"/>
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearLayout"
+        android:layout_gravity="center">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salvar edição"
-        android:id="@+id/button_edit_rules"
-        android:layout_gravity="center"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login administrador"
+            android:id="@+id/button_login_rules"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar edição"
+            android:id="@+id/button_edit_rules"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/rules_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine" />
-
 </LinearLayout>
