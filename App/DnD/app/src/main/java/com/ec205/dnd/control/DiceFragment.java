@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.control;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.ec205.dnd.R;
 
 import java.util.Random;
 

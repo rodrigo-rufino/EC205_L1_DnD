@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.control;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.ec205.dnd.models.Magic;
+import com.ec205.dnd.R;
+import com.ec205.dnd.model.Magic;
 
 import java.util.ArrayList;
 

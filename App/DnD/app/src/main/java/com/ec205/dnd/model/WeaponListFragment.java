@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.model;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.ec205.dnd.models.Magic;
-import com.ec205.dnd.models.Weapon;
+import com.ec205.dnd.R;
+import com.ec205.dnd.control.WeaponCustomAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

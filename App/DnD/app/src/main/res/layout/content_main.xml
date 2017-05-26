@@ -10,7 +10,7 @@
     android:paddingRight="5dp"
     android:paddingTop="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.ec205.dnd.MainActivity"
+    tools:context="com.ec205.dnd.control.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
 </RelativeLayout>
