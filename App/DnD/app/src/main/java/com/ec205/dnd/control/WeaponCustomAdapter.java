@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.control;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.ec205.dnd.models.Character;
+import com.ec205.dnd.R;
+import com.ec205.dnd.model.Weapon;
 
 import java.util.ArrayList;
 
@@ -15,16 +16,16 @@ import java.util.ArrayList;
  * Created by rodri on 15-Apr-17.
  */
 
-public class CharacterCustomAdapter extends BaseAdapter {
+public class WeaponCustomAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    private ArrayList<Character> objects;
+    private ArrayList<Weapon> objects;
 
     private class ViewHolder {
-        TextView userTextView;
+        TextView weaponTextView;
     }
 
-    public CharacterCustomAdapter(Context context, ArrayList<Character> objects) {
+    public WeaponCustomAdapter(Context context, ArrayList<Weapon> objects) {
         inflater = LayoutInflater.from(context);
         this.objects = objects;
     }
@@ -33,7 +34,7 @@ public class CharacterCustomAdapter extends BaseAdapter {
         return objects.size();
     }
 
-    public Character getItem(int position) {
+    public Weapon getItem(int position) {
         return objects.get(position);
     }
 
@@ -46,12 +47,12 @@ public class CharacterCustomAdapter extends BaseAdapter {
         if(convertView == null) {
             holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.adapter_list_view, null);
-            holder.userTextView = (TextView) convertView.findViewById(R.id.user_text_view);
+            holder.weaponTextView = (TextView) convertView.findViewById(R.id.user_text_view);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.userTextView.setText(objects.get(position).getName());
+        holder.weaponTextView.setText(objects.get(position).getName());
         return convertView;
     }
 }

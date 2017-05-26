@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.control;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.ec205.dnd.R;
-import com.ec205.dnd.models.Equipament;
+import com.ec205.dnd.model.Equipament;
 
 import java.util.ArrayList;
 

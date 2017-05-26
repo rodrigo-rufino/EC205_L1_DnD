@@ -1,4 +1,4 @@
-package com.ec205.dnd.models;
+package com.ec205.dnd.model;
 
 /**
  * Created by Eduardo on 08/05/2017.

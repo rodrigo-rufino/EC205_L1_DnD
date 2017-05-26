@@ -1,4 +1,4 @@
-package com.ec205.dnd;
+package com.ec205.dnd.control;
 
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
@@ -11,6 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.ec205.dnd.R;
+import com.ec205.dnd.model.CharacterLoginFragment;
+import com.ec205.dnd.model.EquipamentListFragment;
+import com.ec205.dnd.model.MagicListFragment;
+import com.ec205.dnd.model.WeaponListFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
