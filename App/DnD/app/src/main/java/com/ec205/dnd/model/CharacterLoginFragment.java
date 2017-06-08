@@ -109,8 +109,14 @@ public class CharacterLoginFragment extends Fragment {
         String newLogin = loginEditText.getText().toString();
         String newPassword = passwordEditText.getText().toString();
         if(!newLogin.isEmpty() && !newPassword.isEmpty()){
-            mDatabaseRef.child("users").child(newLogin).child("login").setValue(newLogin);
-            mDatabaseRef.child("users").child(newLogin).child("password").setValue(newPassword);
+            if(dataSnapshot.child("users").child(newLogin).toString() == newLogin){
+                mDatabaseRef.child("users").child(newLogin).child("login").setValue(newLogin);
+                mDatabaseRef.child("users").child(newLogin).child("password").setValue(newPassword);
+                Toast.makeText(getActivity(), "Cadastro realizado com Sucesso.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getActivity(), "Usuário já existe.", Toast.LENGTH_SHORT).show();
+            }
+
         } else {
             Toast.makeText(getActivity(), "Login e Senha estão vazios.", Toast.LENGTH_SHORT).show();
         }
